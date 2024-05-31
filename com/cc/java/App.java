@@ -14,11 +14,6 @@ public class App {
         pollObj(drone);
         pollObj(bird);
 
-        //-- Das geht jetzt nicht mehr ! -- // 
-        // HoneyBee bee = new HoneyBee(); // abstrakte Superklasse!
-        // pollObj(bee);
-
-        
     }
 
     // ---- 4. Iteration Polymorphie -----//
@@ -27,13 +22,16 @@ public class App {
         output(obj.fly());
         output("-----------------");
     }
+    
+    // ---- 5. Überladung -----//
+    private static void pollObj(Bird obj){
+        output(obj.hasFeathers());
+        output(obj.fly());
+        output("-----------------");
+    }
 
-   
     private static void output(String outputStr) {
         System.out.println(outputStr);
     }
 
-
-
 }
-
